@@ -71,10 +71,6 @@ class Pokemon:
         else:
             raise TypeError("Argument given is not a Move object or more than one was given")
         
-    def take_move(self, move:Move):
-        self.hp = max(0,self.hp - move.power)
-
-        
 # Creating a Pokémon object
 miascarade = Pokemon('Meowscarada', 76, 110, 70, 81, 70, 123, 'Protean', 'Grass')
 charizard = Pokemon('Charizard', 78, 84, 78, 109, 85, 100, 'Blaze', 'Fire')
@@ -99,5 +95,3 @@ charizard.add_move(flamethrower)
 
 
 # Verifying Pokemon objects
-print(miascarade)
-print(charizard)
