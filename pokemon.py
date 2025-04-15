@@ -61,12 +61,43 @@ class Pokemon:
             f'Speed: {self.speed}\n'
             f'Ability: {self.ability}\n'
             f'Moves : {self.moves}')
-    def add_move(self, move:Move):
-            self.moves. ppend(move)
-    
 
-miascarade = Pokemon('miascarade',10,10,10,10,10,10,'Protéen','Grass')
+
+    def add_move(self, move: Move):
+        if len(self.moves) >= 4:
+            print("Cannot add more than 4 moves.")
+        elif isinstance(move, Move):
+            self.moves.append(move)
+        else:
+            raise TypeError("Argument given is not a Move object or more than one was given")
+        
+    def take_move(self, move:Move):
+        self.hp = max(0,self.hp - move.power)
+
+        
+# Creating a Pokémon object
+miascarade = Pokemon('Meowscarada', 76, 110, 70, 81, 70, 123, 'Protean', 'Grass')
+charizard = Pokemon('Charizard', 78, 84, 78, 109, 85, 100, 'Blaze', 'Fire')
+
+# Creating a move object
 flower_trick = Move('flower trick', 70, 15, 'Grass')
-u_turn = Move('U_turn', 70, 15, 'Bug')
+u_turn = Move('u_turn', 70, 15, 'Bug')
+flamethrower = Move('flamethrower', 90, 15, 'Fire')
+sucker_punch = Move('sucker_punch', 70, 8, 'Dark')
+knock_off = Move('knock off', 65, 20, 'Dark')
 
-# print(flower_trick)
+
+#Creating a move list
+move_list_miascarade = [flower_trick, u_turn, sucker_punch, knock_off]
+
+# Adding moves with a loop
+for move in move_list_miascarade:
+    miascarade.add_move(move)
+
+# Adding moves to charizard
+charizard.add_move(flamethrower)
+
+
+# Verifying Pokemon objects
+print(miascarade)
+print(charizard)
