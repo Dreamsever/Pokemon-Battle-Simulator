@@ -7,7 +7,9 @@ pokemons = load_pokemons(moves)
 charizard = pokemons["charizard"]
 meowscarada = pokemons["meowscarada"]
 flamethrower = moves["Flamethrower"]
+flower_trick = moves["Flower Trick"]
 
-meowscarada.add_move(flamethrower)
+charizard.add_move(flamethrower)
+meowscarada.add_move(flower_trick)
 
-print(flamethrower)
+battle_simulator(meowscarada,charizard)
