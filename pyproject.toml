@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pokemon-battle-simulator"
-version = "1.0.1"
+version = "1.0.3"
 description = "A Python package for simulating Pokemon battles."
 authors = [
     { name = "Dreamsever", email = "your.email@example.com" }
