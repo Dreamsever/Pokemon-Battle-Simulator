@@ -115,3 +115,6 @@ def load_pokemons(moves_dict, filepath="pokemons.json"):
         pokemons[poke_data["name"]] = poke
     return pokemons
 
+moves = load_moves()
+pokemons = load_pokemons(moves)
+
