@@ -54,14 +54,14 @@ class Pokemon:
             raise Exception("Type given is not in the type list")
 
     def __str__(self):
-        return (f'Name: {self.name}\n'
-            f'HP: {self.hp}/{self.max_hp}\n'
-            f'Attack: {self.attack}\n'
-            f'Defense: {self.defense}\n'
-            f'Special Attack: {self.attack_sp}\n'
-            f'Special Defense: {self.defense_sp}\n'
-            f'Speed: {self.speed}\n'
-            f'Ability: {self.ability}\n'
+        return (f'Name: {self.name} |\n'
+            f'HP: {self.hp}/{self.max_hp} |\n'
+            f'Attack: {self.attack} |\n'
+            f'Defense: {self.defense} |\n'
+            f'Special Attack: {self.attack_sp} |\n'
+            f'Special Defense: {self.defense_sp} |\n'
+            f'Speed: {self.speed} |\n'
+            f'Ability: {self.ability} |\n'
             f'Moves : {self.moves}')
 
 
@@ -92,6 +92,7 @@ def load_moves(filepath="moves.json"):
     return {move_data["name"]: Move(**move_data) for move_data in data}
 
 def load_pokemons(moves_dict, filepath="pokemons.json"):
+    """Loads pokémons using the json file"""
     with open(filepath, "r") as f:
         data = json.load(f)
     pokemons = {}
