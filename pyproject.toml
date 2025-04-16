@@ -10,3 +10,15 @@ authors = [
     { name = "Dreamsever", email = "your.email@example.com" }
 ]
 license = { text = "MIT" }
+
+[tool.setuptools]
+# Specify either packages or py-modules depending on your project structure.
+# Use packages if your project contains directories with __init__.py files.
+# Use py-modules if your project consists of individual Python files.
+packages = ["main", "battle", "pokemon"]
+# Or, alternatively, if it's a flat structure with Python files:
+# py-modules = ["main", "battle", "pokemon"]
+
+[tool.setuptools.packages.find]
+# Exclude test directories or other unwanted files.
+exclude = ["tests*", "docs*"]
