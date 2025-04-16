@@ -1,6 +1,0 @@
-README.md
-setup.py
-pokemon_sim.egg-info/PKG-INFO
-pokemon_sim.egg-info/SOURCES.txt
-pokemon_sim.egg-info/dependency_links.txt
-pokemon_sim.egg-info/top_level.txt
